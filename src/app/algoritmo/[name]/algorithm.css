@@ -1,0 +1,166 @@
+.page-algorithm {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 99;
+}
+
+.section-targets {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.target-graphic {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 99;
+  padding-top: 50px;
+  overflow-y: hidden;
+}
+.box-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+}
+
+.box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.icon-info {
+  cursor: pointer;
+}
+
+
+.box-info-text {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  width: 220px; 
+  height: 220px;
+  padding: 10px;
+  overflow-y: auto;
+  border-radius: 5px;
+  background-color: #161616;
+  box-shadow: 0 0 5px #202020;
+  transition: .5s;
+
+}
+
+.box-info-text p {
+  color: #fff;
+}
+
+
+.run-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.run-button:hover {
+  border-color: #28a745;
+}
+
+.button-refresh {
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+}
+
+.title-steps {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+
+.box-steps {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 16px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.active-btn {
+  box-shadow: 0 0 16px #28a745;
+  background-color: #28a745;
+  color: #fff;
+  transition: .5s;
+}
+
+.box-details {
+  width: 100%;
+  padding: 10px;
+}
+.detail {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.target-editor {
+  width: 100%;
+  height: 100vh;
+}
+
+.target-console {
+  width: 100%;
+  height: 80%;
+  background-color: #161616;
+  padding: 10px;
+}
+
+.target-console h4 {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.target-console pre {
+  color: #ddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+

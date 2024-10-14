@@ -1,0 +1,63 @@
+.page-algorithms {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+
+}
+
+.title-algorithms {
+  text-align: center;
+  padding: 10px 10px 20px 10px;
+  color: #fff;
+  text-shadow: 0 12px 20px #ddd;
+  font-size: 30px;
+}
+
+.section-algorithms {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.card-algorithm {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  background-color: #070707;
+}
+
+.title-card {
+  color: #fff;
+}
+
+.desc-card {
+  color: #eee;
+}
+
+.link-card {
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.link-card:hover {
+    background-color: #fff;
+    color: #000;
+    transition: .5s;
+}

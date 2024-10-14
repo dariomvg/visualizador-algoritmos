@@ -1,0 +1,41 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    z-index: 999;
+}
+
+
+.logo-header {
+    color: #fff;
+    text-shadow: 0 0 10px #ddd;
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.link-header {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .5s;
+    border-bottom: 1px solid transparent;
+}
+
+.link-header:hover {
+    transition: .5s;
+    color: #fff;
+    border-color: #fff;
+}
+
+
