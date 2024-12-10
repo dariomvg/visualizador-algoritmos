@@ -1,11 +1,11 @@
 "use client"; 
 import Link from "next/link";
 import "../styles/aside-nav.css"; 
-import { algorithms } from "@/utils/algorithms";
-import menu from "../assets/menu.svg"; 
+import menu from "@/assets/menu.svg"
 import { useState } from "react";
+import { algorithms } from "@/utils/algorithms";
 
-export const AsideNav = () => {
+export const AsideNav = (): JSX.Element => {
   const [active, setActive] = useState(false); 
   return (
     <aside className={`aside-nav ${active ? "active" : ""}`}>

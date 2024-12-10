@@ -1,4 +1,7 @@
-export const features = [
+import { FeaturesTypes } from "../types/utils.types";
+
+
+export const features: FeaturesTypes[] = [
     {
         id: 0,
         title: "Ver cada paso detallado",

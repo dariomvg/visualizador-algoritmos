@@ -5,8 +5,9 @@ import iconRun from "../../../assets/play.svg";
 import iconRefresh from "../../../assets/refresh.svg";
 import iconInfo from "../../../assets/info.svg";
 import { useAlgorithm } from "@/hooks/useAlgorithm";
+import { ParamsPageAlgorithm } from "@/types/utils.types";
 
-export default function PageAlgorithm({ params }) {
+export default function PageAlgorithm({ params }: ParamsPageAlgorithm) {
   const {
     executeCode,
     consoleOutput,

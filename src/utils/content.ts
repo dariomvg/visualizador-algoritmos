@@ -1,4 +1,6 @@
-export const content = [
+import { ContentTypes } from "../types/utils.types";
+
+export const content: ContentTypes[] = [
   {
     id: 0,
     name: "busqueda-binaria",

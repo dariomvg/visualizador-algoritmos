@@ -1,9 +1,11 @@
-import { Header } from "@/components/Header";
+
+import { Header } from "../components/Header";
+import { features } from "../utils/features_main";
 import "./page.css";
 import Link from "next/link";
-import { features } from "@/utils/features_main";
 
-export default function Home() {
+
+export default function Home(): JSX.Element {
   return (
     <main className="main">
       <Header />

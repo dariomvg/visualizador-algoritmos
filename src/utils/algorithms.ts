@@ -1,4 +1,6 @@
-export const algorithms = [
+import { AlgorithmsTypes } from "../types/utils.types";
+
+export const algorithms: AlgorithmsTypes[] = [
     {
         id: 0,
         title: "Búsqueda binaria",

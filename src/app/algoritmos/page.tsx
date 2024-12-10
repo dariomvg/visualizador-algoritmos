@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./algorithms.css";
 import { algorithms } from "@/utils/algorithms";
 
-export default function Algorithms() {
+export default function Algorithms(): JSX.Element {
   return (
     <section className="page-algorithms">
       <h1 className="title-algorithms">Algoritmos</h1>
