@@ -11,7 +11,7 @@ export const AsideNav = (): JSX.Element => {
     <aside className={`aside-nav ${active ? "active" : ""}`}>
       <img src={menu.src} alt="menu outline" width={40} height={40} className="menu-aside" onClick={() => setActive(!active)} />
       <nav className="nav">
-        <Link href="/" className="link-nav">Principal</Link>
+        <Link href="/" className="link-nav">Volver</Link>
         {algorithms.map(({id, title, link}) => <Link key={id} href={`/algoritmo/${link}`} className="link-nav">{title}</Link>)}
       </nav>
     </aside>
