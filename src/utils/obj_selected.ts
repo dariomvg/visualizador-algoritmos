@@ -1,0 +1,1 @@
+export const objSelected = { id: null, details: "", code: "" }

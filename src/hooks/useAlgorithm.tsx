@@ -1,18 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { content } from "@/utils/content";
-import { UseAlgorithmTypes } from "@/types/utils.types";
+import { Step, UseAlgorithmTypes } from "@/types/utils.types";
+import { objAlgorithm } from "@/utils/obj_algorithm";
+import { objSelected } from "@/utils/obj_selected";
 
-export const useAlgorithm = (name: string): UseAlgorithmTypes => {
+export const useAlgorithm = (name: string | string[]): UseAlgorithmTypes => {
   const [consoleOutput, setConsoleOutput] = useState("");
-  const [selected, setSelected] = useState({ id: null, details: "", code: "" });
-  const [algorithm, setAlgorithm] = useState({
-    id: null,
-    name: "",
-    description: "",
-    steps: [],
-  });
-  const [viewDesc, setViewDesc] = useState(false);
+  const [selected, setSelected] = useState(objSelected);
+  const [algorithm, setAlgorithm] = useState(objAlgorithm);
 
   const executeCode = () => {
     let output = "";
@@ -28,8 +24,16 @@ export const useAlgorithm = (name: string): UseAlgorithmTypes => {
     }
   };
 
+  const chooseStep = (item: Step) => {
+    setSelected(item);
+  };
+
   const saveCode = (value: string) => {
     setSelected({ ...selected, code: value });
+  };
+
+  const cleanConsole = () => {
+    setConsoleOutput("");
   };
 
   useEffect(() => {
@@ -44,11 +48,9 @@ export const useAlgorithm = (name: string): UseAlgorithmTypes => {
     consoleOutput,
     executeCode,
     algorithm,
-    setConsoleOutput,
     selected,
-    setSelected,
     saveCode,
-    viewDesc,
-    setViewDesc,
+    cleanConsole,
+    chooseStep,
   };
 };

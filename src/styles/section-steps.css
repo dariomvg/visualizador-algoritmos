@@ -1,0 +1,39 @@
+.title-steps {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+
+.box-steps {
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 10px;
+  gap: 16px;
+}
+
+
+.step {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.active-btn {
+  box-shadow: 0 0 16px #28a745;
+  background-color: #28a745;
+  color: #fff;
+  transition: .5s;
+}

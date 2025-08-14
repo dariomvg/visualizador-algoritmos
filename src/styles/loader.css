@@ -1,25 +1,25 @@
-.section-loader {
+.loader-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.loader {
+.box-loader {
   border: 4px solid #28a745;
   border-left-color: transparent;
   border-radius: 50%;
 }
 
-.loader {
+.box-loader {
   border: 4px solid #28a745;
   border-left-color: transparent;
   width: 36px;
   height: 36px;
 }
 
-.loader {
+.box-loader {
   border: 4px solid #28a745;
   border-left-color: transparent;
   width: 36px;

@@ -1,11 +1,9 @@
-
 import { Header } from "../components/Header";
 import { features } from "../utils/features_main";
 import "./page.css";
 import Link from "next/link";
 
-
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
     <main className="main">
       <Header />
@@ -31,9 +29,8 @@ export default function Home(): JSX.Element {
         </div>
       </section>
       <footer className="footer-main">
-        <p className="title-footer">Hecho por</p>
         <a href="https://github.com/dariomvg" target="_blank" rel="noreferrer" className="link-footer">
-          Dario Martinez
+          Github del creador✨
         </a>
       </footer>
     </main>

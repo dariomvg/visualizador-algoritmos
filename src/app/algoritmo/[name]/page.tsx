@@ -1,83 +1,53 @@
 "use client";
 import "./algorithm.css";
-import Editor from "@monaco-editor/react";
-import iconRun from "../../../assets/play.svg";
-import iconRefresh from "../../../assets/refresh.svg";
-import iconInfo from "../../../assets/info.svg";
 import { useAlgorithm } from "@/hooks/useAlgorithm";
-import { ParamsPageAlgorithm } from "@/types/utils.types";
+import { useParams } from "next/navigation";
+import dynamic from "next/dynamic";
+import { Loader } from "@/components/Loader";
 
-export default function PageAlgorithm({ params }: ParamsPageAlgorithm) {
+const SectionSteps = dynamic(() => import("@/components/SectionSteps"), {
+  ssr: false,
+  loading: () => <Loader />,
+});
+
+const Editor = dynamic(() => import("@monaco-editor/react"), {
+  ssr: false,
+  loading: () => <Loader />,
+});
+
+const HeaderAlgorithm = dynamic(() => import("@/components/HeaderAlgorithm"), {
+  ssr: false,
+  loading: () => <Loader />,
+});
+
+export default function PageAlgorithm() {
+  const { name } = useParams();
+  if (!name) return;
+
   const {
     executeCode,
-    consoleOutput,
-    setConsoleOutput,
-    algorithm,
     selected,
-    setSelected,
+    consoleOutput,
+    algorithm,
     saveCode,
-    viewDesc,
-    setViewDesc,
-  } = useAlgorithm(params.name);
+    cleanConsole,
+    chooseStep,
+  } = useAlgorithm(name);
 
   return (
     <section className="page-algorithm">
       <section className="section-targets">
         <section className="target-graphic">
-          <div className="box-controls">
-            <div className="box-info">
-              <img
-                src={iconInfo.src}
-                alt="information"
-                width={30}
-                height={30}
-                className="icon-info"
-                title="Información"
-                onClick={() => setViewDesc(!viewDesc)}
-              />
-              {viewDesc && (
-                <div className="box-info-text">
-                  <p>{algorithm && algorithm.description}</p>
-                </div>
-              )}
-            </div>
-            <button onClick={executeCode} className="run-button">
-              Probar
-              <img
-                src={iconRun.src}
-                alt="run"
-                title="run"
-                width={30}
-                height={30}
-              />
-            </button>
-            <button
-              onClick={() => setConsoleOutput("")}
-              className="button-refresh">
-              <img
-                src={iconRefresh.src}
-                alt="refresh"
-                width={25}
-                height={25}
-                title="Reiniciar consola"
-              />
-            </button>
-          </div>
-
-          <h4 className="title-steps">Pasos</h4>
-          <div className="box-steps">
-            {algorithm.steps &&
-              algorithm.steps.map((item) => (
-                <button
-                  key={item.id}
-                  className={`step ${
-                    selected.id == item.id ? "active-btn" : ""
-                  }`}
-                  onClick={() => setSelected(item)}>
-                  {item.id}
-                </button>
-              ))}
-          </div>
+          <HeaderAlgorithm
+            description={algorithm.description}
+            executeCode={executeCode}
+            cleanConsole={cleanConsole}
+          />
+          <SectionSteps
+            chooseStep={chooseStep}
+            selected={selected}
+            steps={algorithm.steps}
+          />
           <div className="box-details">
             <p className="detail">{algorithm && selected.details}</p>
           </div>

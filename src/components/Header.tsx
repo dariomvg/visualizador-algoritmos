@@ -1,7 +1,7 @@
 import Link from "next/link"
 import "../styles/header.css"
 
-export const Header = (): JSX.Element => {
+export const Header = () => {
   return (
     <header className="header">
         <h3 className="logo-header">VisualizadorAlgoritmos</h3>

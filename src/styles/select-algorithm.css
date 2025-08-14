@@ -1,0 +1,11 @@
+.select-algorithm {
+    padding: 10px; 
+    border-radius: 5px; 
+    outline: none; 
+    color: #fff; 
+    background-color: #202020; 
+    border: none; 
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer; 
+}
